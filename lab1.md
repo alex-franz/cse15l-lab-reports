@@ -1,4 +1,6 @@
 # Lab Report 1 
+## Alexander Franz 
+## A16816659
 
 ## `ls` 
 
@@ -21,7 +23,7 @@
 ## `cat` 
 1. `cat` without any arguments causes the terminal to keep tring to run cat, but since there are no arguments, it just doesn't stop. The working directory is the home directory.
 ![image](https://github.com/alex-franz/cse15l-lab-reports/assets/146875191/3d0bcff0-1dc3-46e0-b3d3-846d93b19f6a)
-3. `cat` with a file as an arugment will print out the contents fo the file. The wokring directory is the home directory. The output is not an error.  
+3. `cat` with a file as an argument will print out the contents fo the file. The working directory is the home directory. The output is not an error.  
 ![image](https://github.com/alex-franz/cse15l-lab-reports/assets/146875191/2969dfdd-6982-4e34-8a32-778392a063bc)
 5. `cat` with a directory as an argument will print out an error that `cat` does not take in directories. The working directory is the home directory. 
 ![image](https://github.com/alex-franz/cse15l-lab-reports/assets/146875191/72ca5117-7152-4508-8582-9047e5d31f38)
