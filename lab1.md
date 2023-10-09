@@ -8,7 +8,7 @@
 ![image](https://github.com/alex-franz/cse15l-lab-reports/assets/146875191/20b03f65-2ecc-4055-863b-1f8270c64da0)
 3. For `ls` with a file path as an argument, the command line prints out the path, not the contents of the file. In this example, the working directory is the home directory. This output is not an error. 
 ![image](https://github.com/alex-franz/cse15l-lab-reports/assets/146875191/77576f40-174d-4f36-8210-bacfe9a928cf)
-5. For `ls` with a directory as an arugment, the command line will print out the contents of the directory. In this example the working directory is the home directory. This output is not an error. 
+5. For `ls` with a directory as an argument, the command line will print out the contents of the directory. In this example the working directory is the home directory. This output is not an error. 
 ![image](https://github.com/alex-franz/cse15l-lab-reports/assets/146875191/1363b3d8-933e-495c-8b81-46a8302d01a0)
 
 
