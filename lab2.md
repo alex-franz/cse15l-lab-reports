@@ -8,12 +8,10 @@ Here is the code I wrote for my StringServer.
 
 Here are the screenshots of StringServer at work. 
 ![image](https://github.com/alex-franz/cse15l-lab-reports/assets/146875191/85d82666-b08f-4151-a2ba-d99ed8cbbce5)
-In this first screenshot, the method that is called is the handleRequest method, which takes in the specified query and extracts the 
-String parameter and adds it to the field `Array<String> lst`. Then, the string is decoded and printed to the page as number 1. The 
-value of `lst` is changed as the String "Hello" is added. 
+In this screenshot the methods called in order are the main method in the StringServer class, then the start method in the Server class is called and the server is created. Then handleRequest is called with the URL as the argument and when /add-message?s=Hello is added to the end of the URL, then "Hello" is printed to the screen numbered 1. The field `Array<String> lst` is changed during this becasue Hello is added to the list. No values in specific were changed.
 
 ![image](https://github.com/alex-franz/cse15l-lab-reports/assets/146875191/3498268f-3371-47af-84f8-e882fb9dbf3c)
-Similarly to the previous screenshot, the method called is handleRequest. It detects the same query and adds the String "How are you" 
+Similarly to the previous screenshot, the method called is handleRequest which takes in the URL as an arugment again. It detects the same query and adds the String "How are you" 
 to the field `Array<String> lst`, which changes it. Then the string is decoded to prevent the method from showing "How+are+you" 
 instead of "How are you", and then shown on the page as number 2. 
 
