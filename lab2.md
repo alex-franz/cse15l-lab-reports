@@ -20,13 +20,15 @@ instead of "How are you", and then shown on the page as number 2. With other req
 
 
 
-![image](https://github.com/alex-franz/cse15l-lab-reports/assets/146875191/cee7e43c-ba02-4ff6-96e0-97ddd37820ee)
+![ls key on local](https://github.com/alex-franz/cse15l-lab-reports/assets/146875191/f5a04613-1cf0-4e3e-bae1-f0130d9e9d16)
+
 
 In this screenshot, we can see using ls, the path of my private ssh key would be C:/Users/afran/.ssh/id_rsa
 
-![image](https://github.com/alex-franz/cse15l-lab-reports/assets/146875191/b812d202-50c1-4243-a391-0ac335b6f11a)
+![ls ssh keys on ieng6](https://github.com/alex-franz/cse15l-lab-reports/assets/146875191/d67462f8-c758-4b05-a996-af4de0f83aa7)
 
-On ieng6, the path to the key would be /home/.ssh/id_rsa. 
+
+On ieng6, I navigated to ~/.ssh and ls to the keys. The path to the key would be ~/.ssh/id_rsa. 
 
 ![image](https://github.com/alex-franz/cse15l-lab-reports/assets/146875191/67e9772e-2650-4ced-8b26-3c6aba859205)
 
