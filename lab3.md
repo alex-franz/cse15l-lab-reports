@@ -50,6 +50,8 @@ static void reverseInPlace(int[] arr) {
 ```
 This code initializes a temp int using i in the loop, then it swaps the element on the other side, then swaps the temp element with the associated element. Also it iterates through only half the list so the actual output doesn't just look like a reflected list. 
 
+## Part 2:
+
 ## The find command
 
 The find command is a very powerful tool to find specific files or directories. The `-type` option allows us to find items that are either directories (d), files (f), etc. 
@@ -102,6 +104,8 @@ Then, if we run `find ./technical type f` we get a huge output of files that are
 ./technical/911report/chapter-11.txt
 ```
 
+It would be very useful to use this option as it can help us find directories within directories that have lots of files. 
+
 The `-size` option allows us to find files or directories that are of the specified size. In this example below, I'm finding files of size less than 10kb in the `./technical` directory. 
 
 The command ```% find ./technical/911report -size -10k ``` will give us the output 
@@ -134,20 +138,25 @@ The output is
 ./technical/911report/chapter-10.txt
 ./technical/911report/chapter-11.txt
 ```
-As we can see, the two outputs are different. 
+As we can see, the two outputs are different. Using this option can allow us to find huge files that take up too much space in a certain drive, which can allow the user to maintain a healthier file system.  
 
-The `-empty` option gives users the ability to search for empty files/directories. This can be very useful in managing files and deleting unused files/directories. The screenshot below shows an example of using this option. I added a directory to the `./technical` directory that contains an empty file to show this command in action. 
+The `-empty` option gives users the ability to search for empty files/directories. This can be very useful in managing files and deleting unused files/directories. The screenshot below shows an example of using this option. I added a directory to the `./technical` directory called `/empty` that contains an empty file to show this command in action. 
 
 The command ```% find ./technical -empty``` outputs 
 
-```./technical/empty/empty.txt```
+```
+./technical/empty/empty.txt
+```
 
 Which is the empty txt file I added to the empty directory I created
 
-Then, if I create an empty directory labeled empty, we can use the command ```% find ./technical -empty``` again, but the output would be 
+Then, if I delete the empty.txt file, we can use the command ```% find ./technical -empty``` again, but the output would be 
 
-```./technical/empty```
+```
+./technical/empty
+```
 
+This option could help us find empty files/directories that we would want to get rid if our file system is cluttered. 
 
 The `-depth` option allows us to find files in a sorted list to the command line. It finds files at the farthest location then prints until it reaches the specified parent directory. 
 
@@ -182,7 +191,7 @@ This example uses depth in the `./technical` directory and prints out all the fi
 ./technical
 ```
 
-Another example, ```% find ./technical/911reports/chapter*.txt -depth``` will print out all the files with the specified pattern in the sorted order based on the directory structure. 
+Another example, ```% find ./technical/911reports/chapter*.txt -depth``` will print out all the files with the specified pattern in the sorted order based on the directory structure. This could help us find the last files in a directory if the directory contains a lot of files.
 ```
 ./technical/911report/chapter-1.txt
 ./technical/911report/chapter-10.txt
