@@ -58,7 +58,7 @@ ___
 
 **Step 6: Commit and push the resulting change to your Github account**
 
-During this step, I typed out `git add .` then pressed `<enter>` to stage the file for a commit. This command stages all files added or modified for a new commit to the current branch. Then, on the next command I typed out `git commit -m "bug fixed"` and `<enter>` to run the command. This commits the added files to the main branch of my forked repository. Then I typed out the command `git push` and `<enter>` to run it. This command pushes the commit to the remote server. Finally, the output shows how many files were modified as well as how many insertions and deletions that were made, and some other output after `git push`.
+During this step, I typed out `git add .` then pressed `<enter>` to stage the file for a commit. This command stages all files added or modified for a new commit to the current branch. Then, on the next command I typed out `git commit -m "bug fixed"` and `<enter>` to run the command. This commits the added files to the main branch of my forked repository with the following message after the `-m` option. Then I typed out the command `git push` and `<enter>` to run it. This command pushes the commit to the remote server. Finally, the output shows how many files were modified as well as how many insertions and deletions that were made, and some other output after `git push`.
 
 <img width="500" alt="image" src="https://github.com/alex-franz/cse15l-lab-reports/assets/146875191/0f5a3bed-832b-4fb1-8f5e-6e2b23432a6c">
 
