@@ -9,7 +9,7 @@
 
 The student is assigned a short in class exercise that requires them to implement a Selection Sort algorithm for a int list. They also must write a basic test that shows the algorithms works with basic cases. 
 
-They are also required to write a bash script to compile and run the program within JDB. 
+They are also required to write a bash script to compile and run the program.
 
 **Student Post/Question**
 
