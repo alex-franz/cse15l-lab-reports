@@ -12,18 +12,72 @@ They are also required to write a bash script to compile and run the program wit
 Hello, I'm trying to implement my sort algorithm but I keep getting this weird output where my sorted array is all the value one. I'm not sure why it's doing this but I have a feeling it has to do with my swapping section because the first value is 1, which is the expected value for the sorted array at index 0. Here's my code below and the bash script I made to run it. 
 
 ```
-public static int[] insertion(int[] lst) {
-	for ( int i = 0; i < lst.length - 1; i++) {
-		int min = i; 
-		for ( int j = 0; j < lst.length; j++ ) {
-			if ( lst[min] >=  lst[j] ) {
-				min = j;
+import java.util.ArrayList;
+
+public class Sort{
+	
+	public static int[] insertion(int[] lst) {
+		for ( int i = 0; i < lst.length - 1; i++) {
+			int min = i; 
+			for ( int j = i; j < lst.length; j++ ) {
+				if ( lst[min] >=  lst[j] ) {
+					min = j;
+				}
 			}
+
+			//int temp = lst[i];
+			lst[i] = lst[min];
+			//lst[min] = temp;
+		}		
+		return lst;
+	}
+	
+
+
+	public static void main(String[] args) {
+		
+		
+		int[] testArr = {6,5,4,3,2,1};
+		int[] expectedArr = {1,2,3,4,5,6};
+		System.out.println("Test Array:");
+		System.out.print("[ ");
+		for (int j = 0; j < testArr.length; j++) {
+			System.out.print(testArr[j]);
+			System.out.print(" ");
+
 		}
-		lst[i] = lst[min];
-	}		
-	return lst;
+		System.out.println("]");
+		int[] newArr = insertion(testArr);
+		for ( int i = 0; i < newArr.length; i ++ ) {
+			if ( newArr[i] != expectedArr[i] ) {
+				System.out.println("Error! Did not match expected array! ");
+				break;
+			} 
+		}
+		System.out.println("Sorted Array:");
+		System.out.print("[ ");
+		for (int i = 0; i < newArr.length; i++ ) {
+			System.out.print(newArr[i]);
+			System.out.print(" ");
+
+		}
+		System.out.println("]");
+
+
+	
+	}
 }
 ```
+```
+javac Sort.java 
+java Sort 
+```
 
-When I input the array `{6,5,4,3,2,1}`, my test method outputs `{1,1,1,1,1,1}`. 
+I ran the test I made using `bash test.sh` at the command line and the resulting output is below.
+```
+Test Array:
+[ 6 5 4 3 2 1 ]
+Error! Did not match expected array! 
+Sorted Array:
+[ 1 1 1 1 1 1 ]
+```
