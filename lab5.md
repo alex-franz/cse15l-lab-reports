@@ -83,4 +83,25 @@ Sorted Array:
 
 **TA Response**
 
-Hi student! This is a great start to your algorithm. The method correctly identifies the minumum value however, it does seem like your swapping portion is incorrect. I recommend altering your bash script to run the file with jdb and try to set breakpoints near your swap to see what value is being swapped. 
+Hi student! This is a great start to your algorithm. The method correctly identifies the minumum value however, it does seem like your swapping portion is incorrect. Do you think your swap is actually swapping the values?
+
+**Student Fix**
+
+I inspected the algorithm and realized my swap wasn't actually swapping the values. I was just reassigning the current element to the minimum value and losing the current value. Since the minimum value is at the end of the list, it's reassigning all the values to 1, which obviously does not sort the list. I added two lines of code to prevent this. First I added a temp variable to assign to the current value, the reassignmedn the value, and then reassigned the min value oin the list to the temp variable, which effectiveley swaps the values without losing the current value. My new code is below.
+```
+public static int[] selection(int[] lst) {
+	for ( int i = 0; i < lst.length - 1; i++) {
+		int min = i; 
+		for ( int j = i; j < lst.length; j++ ) {
+			if ( lst[min] >=  lst[j] ) {
+				min = j;
+			}
+		}
+		int temp = lst[i];
+		lst[i] = lst[min];
+		lst[min] = temp;
+	}		
+	return lst;
+}
+```
+
