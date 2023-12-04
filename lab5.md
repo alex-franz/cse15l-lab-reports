@@ -83,11 +83,11 @@ Sorted Array:
 
 **TA Response**
 
-Hi student! This is a great start to your algorithm. The method correctly identifies the minumum value however, it does seem like your swapping portion is incorrect. Do you think your swap is actually swapping the values?
+Hi student! This is a great start to your algorithm. The method correctly identifies the minumum value, however, it does seem like your swapping portion is incorrect. Do you think your swap is actually swapping the values?
 
 **Student Fix/ Explanation of Bug**
 
-I inspected the algorithm and realized my swap wasn't actually swapping the values. I was just reassigning the current element to the minimum value and losing the current value. Since the minimum value is at the end of the list, it's reassigning all the values to 1, which obviously does not sort the list. I added two lines of code to prevent this. First I added a temp variable to assign to the current value, the reassignmedn the value, and then reassigned the min value oin the list to the temp variable, which effectiveley swaps the values without losing the current value. My new code is below.
+I inspected the algorithm and realized my swap wasn't actually swapping the values. I was just reassigning the current element to the minimum value and losing the current value. Since the minimum value is at the end of the list, it's reassigning all the values to 1, which obviously does not sort the list. I added two lines of code to prevent this. First, I added a temp variable to assign to the current value, then reassignmed that value, and finally reassigned the min value in the list to the temp variable, which effectiveley swaps the values without losing the current value. My new code is below.
 ```
 public static int[] selection(int[] lst) {
 	for ( int i = 0; i < lst.length - 1; i++) {
@@ -104,7 +104,7 @@ public static int[] selection(int[] lst) {
 	return lst;
 }
 ```
-Now, after running it my output is as expected! The output is below.
+Now, after running it my output is as expected! After running `bash test.sh`, the output shows as below.
 
 ```
 Test Array:
