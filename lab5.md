@@ -9,7 +9,7 @@ They are also required to write a bash script to compile and run the program wit
 
 **Student Post/Question**
 
-Hello, I'm trying to implement my sort algorithm but I keep getting this weird output where my array is sorted except for the last elemetn. I'm so close and I can;t figure out why it's doing this. Here's a screenshot of my code. 
+Hello, I'm trying to implement my sort algorithm but I keep getting this weird output where my sorted array is all the value one. I'm not sure why it's doing this but I have a feeling it has to do with my swapping section because the first value is 1, which is the expected value for the sorted array at index 0. Heres my code below. 
 
 ```
 public static int[] insertion(int[] lst) {
@@ -20,10 +20,10 @@ public static int[] insertion(int[] lst) {
 				min = j;
 			}
 		}
-		int temp = lst[i];
 		lst[i] = lst[min];
-		lst[min] = temp;
 	}		
 	return lst;
 }
 ```
+
+When I inputting the array `{6,5,4,3,2,1}`, my test method outputs `{1,1,1,1,1,1}`. 
