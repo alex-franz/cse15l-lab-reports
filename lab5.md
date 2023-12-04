@@ -104,4 +104,13 @@ public static int[] selection(int[] lst) {
 	return lst;
 }
 ```
+Now, after running it my output is as expected! The output is below.
+
+```
+Test Array:
+[ 6 5 4 3 2 1 ]
+Sorted Array:
+[ 1 2 3 4 5 6 ]
+'''
+
 
