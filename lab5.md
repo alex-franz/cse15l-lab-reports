@@ -1,6 +1,10 @@
 # Lab Report 5
 ## Alexander Franz, A16816659
 
+
+
+## Part 1: Debugging Scenario
+
 **Scenario Instructions**
 
 The student is assigned a short in class exercise that requires them to implement a Selection Sort algorithm for a int list. They also must write a basic test that shows the algorithms works with basic cases. 
@@ -87,7 +91,7 @@ Hi student! This is a great start to your algorithm. The method correctly identi
 
 **Student Fix/ Explanation of Bug**
 
-I inspected the algorithm and realized my swap wasn't actually swapping the values. I was just reassigning the current element to the minimum value and losing the current value. Since the minimum value is at the end of the list, it's reassigning all the values to 1, which obviously does not sort the list. I added two lines of code to prevent this. First, I added a temp variable to assign to the current value, then reassignmed that value, and finally reassigned the min value in the list to the temp variable, which effectiveley swaps the values without losing the current value. My new code is below.
+I inspected the algorithm and realized my swap wasn't actually swapping the values. I was just reassigning the current element to the minimum value and losing the current value. Since the minimum value is at the end of the list, it's reassigning all the values to 1, which obviously does not sort the list. I added two lines of code to prevent this. First, I added a temp variable to assign to the current value, then reassignmed that value, and finally reassigned the min value in the list to the temp variable, which effectiveley swaps the values without losing the current value. here is a code snippet of my selection method. I also didn't alter my bash script. 
 ```
 public static int[] selection(int[] lst) {
 	for ( int i = 0; i < lst.length - 1; i++) {
@@ -113,4 +117,7 @@ Sorted Array:
 [ 1 2 3 4 5 6 ]
 ```
 
+## Part 2: Reflection
+
+I learned a lot of cool things in the second half of the quarter, but I think the most useful thing was learning how to use Git and Github. Talking to our TA Alon, he noted that Git and Github are used super widely in the industry so it is really important to learn it. After hearing this, I started making my own repositories for my CSE 12 PAs so I can edit my PAs from my laptop or my Home Desktop much more effectively. Our TA also gave us really useful tips when searching for internships. 
 
