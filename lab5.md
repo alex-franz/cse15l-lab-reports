@@ -12,18 +12,18 @@ They are also required to write a bash script to compile and run the program wit
 Hello, I'm trying to implement my sort algorithm but I keep getting this weird output where my array is sorted except for the last elemetn. I'm so close and I can;t figure out why it's doing this. Here's a screenshot of my code. 
 
 ```
-	public static int[] insertion(int[] lst) {
-		for ( int i = 0; i < lst.length - 1; i++) {
-			int min = i; 
-			for ( int j = 0; j < lst.length; j++ ) {
-				if ( lst[min] >=  lst[j] ) {
-					min = j;
-				}
+public static int[] insertion(int[] lst) {
+	for ( int i = 0; i < lst.length - 1; i++) {
+		int min = i; 
+		for ( int j = 0; j < lst.length; j++ ) {
+			if ( lst[min] >=  lst[j] ) {
+				min = j;
 			}
-			int temp = lst[i];
-			lst[i] = lst[min];
-			lst[min] = temp;
-		}		
-		return lst;
-	}
+		}
+		int temp = lst[i];
+		lst[i] = lst[min];
+		lst[min] = temp;
+	}		
+	return lst;
+}
 ```
