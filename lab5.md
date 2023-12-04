@@ -3,7 +3,7 @@
 
 **Scenario Instructions**
 
-The student is assigned a short in class exercise that requires them to implement an Insertion Sort algorithm for a int list. They also must write a basic test that shows the algorithms works with basic cases. 
+The student is assigned a short in class exercise that requires them to implement a Selection Sort algorithm for a int list. They also must write a basic test that shows the algorithms works with basic cases. 
 
 They are also required to write a bash script to compile and run the program within JDB. 
 
@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class Sort{
 	
-	public static int[] insertion(int[] lst) {
+	public static int[] selection(int[] lst) {
 		for ( int i = 0; i < lst.length - 1; i++) {
 			int min = i; 
 			for ( int j = i; j < lst.length; j++ ) {
@@ -24,10 +24,7 @@ public class Sort{
 					min = j;
 				}
 			}
-
-			//int temp = lst[i];
 			lst[i] = lst[min];
-			//lst[min] = temp;
 		}		
 		return lst;
 	}
@@ -47,7 +44,7 @@ public class Sort{
 
 		}
 		System.out.println("]");
-		int[] newArr = insertion(testArr);
+		int[] newArr = selection(testArr);
 		for ( int i = 0; i < newArr.length; i ++ ) {
 			if ( newArr[i] != expectedArr[i] ) {
 				System.out.println("Error! Did not match expected array! ");
@@ -81,3 +78,9 @@ Error! Did not match expected array!
 Sorted Array:
 [ 1 1 1 1 1 1 ]
 ```
+
+
+
+**TA Response**
+
+Hi student! This is a great start to your algorithm. The method correctly identifies the minumum value however, it does seem like your swapping portion is incorrect. I recommend altering your bash script to run the file with jdb and try to set breakpoints near your swap to see what value is being swapped. 
