@@ -13,7 +13,7 @@ They are also required to write a bash script to compile and run the program.
 
 **Student Post/Question**
 
-Hello, I'm trying to implement my sort algorithm but I keep getting this weird output where my sorted array is all the value one. I'm not sure why it's doing this but I have a feeling it has to do with my swapping section because the first value is 1, which is the expected value for the sorted array at index 0. Here's my code below and the bash script I made to run it. 
+Hello, I'm trying to implement my sort algorithm but I keep getting this weird output where my sorted array is all the same. I'm not sure why it's doing this but I have a feeling it has to do with my swapping section because the first value is 1, which is the expected value for the sorted array at index 0. Here's my code below and the bash script I made to run it. 
 
 ```
 import java.util.ArrayList;
@@ -91,7 +91,7 @@ Hi student! This is a great start to your algorithm. The method correctly identi
 
 **Student Fix/ Explanation of Bug**
 
-I inspected the algorithm and realized my swap wasn't actually swapping the values. I was just reassigning the current element to the minimum value and losing the current value. Since the minimum value is at the end of the list, it's reassigning all the values to 1, which obviously does not sort the list. I added two lines of code to prevent this. First, I added a temp variable to assign to the current value, then reassignmed that value, and finally reassigned the min value in the list to the temp variable, which effectiveley swaps the values without losing the current value. here is a code snippet of my selection method. I also didn't alter my bash script. 
+I inspected the algorithm and realized my swap wasn't actually swapping the values. I was just reassigning the current element to the minimum value and losing the current value. Since the minimum value is at the end of the list, it's reassigning all the values to 1, which obviously does not sort the list. I added two lines of code to prevent this. First, I added a `temp` variable that is assigned to the current value, then reassigned that value to the minimum value, and finally reassigned the value at the min index to the temp variable, which effectively swaps the values without losing the current value. Here is a code snippet of my selection method. I didn't alter my bash script. 
 ```
 public static int[] selection(int[] lst) {
 	for ( int i = 0; i < lst.length - 1; i++) {
