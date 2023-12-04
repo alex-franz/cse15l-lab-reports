@@ -13,7 +13,7 @@ They are also required to write a bash script to compile and run the program.
 
 **Student Post/Question**
 
-Hello, I'm trying to implement my sort algorithm but I keep getting this weird output where my sorted array is all the same. I'm not sure why it's doing this but I have a feeling it has to do with my swapping section because the first value is 1, which is the expected value for the sorted array at index 0. Here's my code below and the bash script I made to run it. 
+Hello, I'm trying to implement my sort algorithm but I keep getting this weird output where my sorted array is all the same. I'm not sure why it's doing this but I have a feeling it has to do with my swapping section because the first value is 1, which is the expected value for the sorted array at index 0. Here's my code below and the bash script I made to run it. The first file is named Sort.java and the bash script is named test.sh.
 
 ```
 import java.util.ArrayList;
@@ -91,7 +91,7 @@ Hi student! This is a great start to your algorithm. The method correctly identi
 
 **Student Fix/ Explanation of Bug**
 
-I inspected the algorithm and realized my swap wasn't actually swapping the values. I was just reassigning the current element to the minimum value and losing the current value. Since the minimum value is at the end of the list, it's reassigning all the values to 1, which obviously does not sort the list. I added two lines of code to prevent this. First, I added a `temp` variable that is assigned to the current value, then reassigned that value to the minimum value, and finally reassigned the value at the min index to the temp variable, which effectively swaps the values without losing the current value. Here is a code snippet of my selection method. I didn't alter my bash script. 
+I inspected the algorithm and realized my swap wasn't actually swapping the values. I was just reassigning the current element to the minimum value and losing the current value. Since the minimum value is at the end of the list, it's reassigning all the values to 1, which obviously does not sort the list. I added two lines of code to prevent this. First, I added a temporary variable labeled `temp` that is assigned to the current value, then reassigned that value to the minimum value, and finally reassigned the value at the min index to the temp variable, which effectively swaps the values without losing the current value. Here is a code snippet of my selection method. I didn't alter my bash script. 
 ```
 public static int[] selection(int[] lst) {
 	for ( int i = 0; i < lst.length - 1; i++) {
@@ -119,5 +119,5 @@ Sorted Array:
 
 ## Part 2: Reflection
 
-I learned a lot of cool things in the second half of the quarter, but I think the most useful thing was learning how to use Git and Github. Talking to our TA Alon, he noted that Git and Github are used super widely in the industry so it is really important to learn it. After hearing this, I started making my own repositories for my CSE 12 PAs so I can edit my PAs from my laptop or my Home Desktop much more effectively. Our TA also gave us really useful tips when searching for internships. 
+I learned a lot of cool things in the second half of the quarter, but I think the most useful thing was learning how to use Git and Github. Talking to our TA Alon, he noted that Git and Github are used super widely in the industry so it is really important to learn it. After hearing this, I started making my own repositories for my CSE 12 PAs so I can edit my PAs from my laptop or my Home Desktop much more efficiently. Our TA also gave us really useful tips when searching for internships. I really enjoyed this course and I feel like I learned some really valuable information!
 
